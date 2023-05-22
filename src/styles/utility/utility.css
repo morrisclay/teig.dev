@@ -86,13 +86,16 @@
   opacity: 0;
   visibility: hidden;
   position: absolute;
-  left:calc(50%);
+  left:calc(50% - 100px);
   transform: translate(0, 10px);
-  background-color: #bfbfbf;
-  padding: 0;
+  background-color: hsl(251, 41%, 8%);
+  border-color: hsl(248, 86%, 60%);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px;
   box-shadow: 0;
   width: auto;
-  border-radius: 50%;
 
 }
 .popover__content:before {
