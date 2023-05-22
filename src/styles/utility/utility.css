@@ -73,3 +73,56 @@
 * {
   background: rgb(0 100 0 / 0.05) !important;
 } */
+
+
+
+/* popover css */
+
+
+.popover__wrapper {
+
+}
+.popover__content {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left:calc(50%);
+  transform: translate(0, 10px);
+  background-color: #bfbfbf;
+  padding: 0;
+  box-shadow: 0;
+  width: auto;
+  border-radius: 50%;
+
+}
+.popover__content:before {
+  z-index: -1;
+  content: "";
+  right: calc(50%);
+  top: -80px;
+  border-style: solid;
+  border-width: 0 ;
+  border-color: transparent transparent #bfbfbf transparent;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+.popover__wrapper:hover .popover__content {
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, -100px);
+  transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+
+.popover__message {
+  text-align: center;
+}
+
+/* all links in popover should not change in stye and should not be bold */
+
+
+.popover__wrapper a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 200;
+}
